@@ -17,7 +17,7 @@ phases:
     commands:
       - aws s3 cp --recursive --acl public-read ./build s3://react-pipeline-demo
       - aws s3 cp --acl public-read --cache-control="max-age=0, no-cache, no-store, must-revalidate" ./build/index.html s3://react-pipeline-demo
-      - aws cloudfront create-invalidation --distribution-id EKRM0UHT48G3K --paths /index.html
+      
 artifacts:
   files:
     - "build/*"
